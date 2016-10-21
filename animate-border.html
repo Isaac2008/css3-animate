@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate-border</title>
+	<style>
+		body{
+			background:#000;
+		}
+		.box{
+			width:200px;height:200px;border:20px solid rgba(128,128,128,0.5);border-left-color:#fff;margin:200px auto;border-radius: 50%;-webkit-animation: borderRotate 1.5s infinite linear;
+		}
+
+		@-webkit-keyframes borderRotate {
+			from {
+				webkit-transform:rotate(0);
+			} to {
+				webkit-transform:rotate(360deg);
+			}
+		}
+
+		@keyframes borderRotate {
+			from {
+				webkit-transform:rotate(0);
+				transform:rotate(0);
+			} to {
+				webkit-transform:rotate(360deg);
+				transform:rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
